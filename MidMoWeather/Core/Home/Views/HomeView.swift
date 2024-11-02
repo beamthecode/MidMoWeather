@@ -18,9 +18,7 @@ struct HomeView: View {
             VStack {
                 HStack {
                     ButtonView(iconName: showWeather ? "plus.viewfinder" : "info")
-                        .background(
-                            AnimatedButtonView(animate: $showWeather)
-                        )
+                       
                         
                     Spacer()
                     Text(showWeather ? "Your Weather" : "Weather")
@@ -29,11 +27,15 @@ struct HomeView: View {
                         .foregroundStyle(Color.theme.accent)
                     Spacer()
                     ButtonView(iconName: showWeather ? "sun.snow" : "sun.rain")
+                        .background(
+                            AnimatedButtonView(animate: $showWeather)
+                        )
                         .onTapGesture {
-                            withAnimation(.bouncy()) {
+                            withAnimation(.spring()) {
                                 showWeather.toggle()
                             }
                         }
+                        
                 }
                 .padding(.horizontal, 40)
                 

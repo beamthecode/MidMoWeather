@@ -20,7 +20,7 @@ struct ButtonView: View {
                     .foregroundStyle(Color.theme.background)
             )
             .shadow(color: Color.theme.accent.opacity((0.80)),
-                    radius: 15, x: 0, y: 0)
+                    radius: 10, x: 0, y: 0)
     }
 }
 
