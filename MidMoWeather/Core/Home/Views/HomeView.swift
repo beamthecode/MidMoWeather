@@ -21,7 +21,7 @@ struct HomeView: View {
                        
                         
                     Spacer()
-                    Text(showWeather ? "Your Weather" : "Weather")
+                    Text(showWeather ? "7 Day Forecast" : "Currently")
                         .font(.title3)
                         .fontWeight(.bold)
                         .foregroundStyle(Color.theme.accent)
