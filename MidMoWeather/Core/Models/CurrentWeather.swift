@@ -14,7 +14,7 @@ import Foundation
  */
 
 
-struct Current {
+struct Current: Identifiable, Codable {
     let id: String?
     let type: String?
     let updateTime: Date?
@@ -40,66 +40,67 @@ struct Current {
     let potentialOf50MphWindGusts, potentialOf60MphWindGusts, grasslandFireDangerIndex, probabilityOfThunder: AtmosphericDispersionIndex?
     let davisStabilityIndex, atmosphericDispersionIndex, lowVisibilityOccurrenceRiskIndex, stability: AtmosphericDispersionIndex?
     let redFlagThreatIndex: AtmosphericDispersionIndex?
+    
 }
 
 
 // MARK: - ApparentTemperature
-struct ApparentTemperature {
+struct ApparentTemperature: Codable {
     let uom: String?
     let values: [ApparentTemperatureValue]?
 }
 
 // MARK: - ApparentTemperatureValue
-struct ApparentTemperatureValue {
+struct ApparentTemperatureValue: Codable {
     let validTime: String?
     let value: ValueUnion?
 }
 
-enum ValueUnion {
+enum ValueUnion: Codable {
     case double(Double)
     case valueValueClassArray([ValueValueClass])
     case null
 }
 
 // MARK: - ValueValueClass
-struct ValueValueClass {
+struct ValueValueClass: Codable {
     let coverage: Coverage?
     let weather: Weather?
     let intensity: Intensity?
     let visibility: Elevation?
-    let attributes: [Any?]?
+    //let attributes: [Any?]?
 }
 
-enum Coverage: String {
+enum Coverage: String, Codable {
     case chance
     case definite
     case likely
     case slightChance
 }
 
-enum Intensity: String {
+enum Intensity: String, Codable {
     case heavy
     case light
     case moderate
 }
 
 // MARK: - Elevation
-struct Elevation {
+struct Elevation: Codable {
     let unitCode: UnitCode?
     let value: Double?
 }
 
-enum UnitCode: String {
+enum UnitCode: String, Codable {
     case wmoUnitKM
     case wmoUnitM
 }
 
-enum Weather: String {
+enum Weather: String, Codable {
     case rain
     case thunderstorms
 }
 
 // MARK: - AtmosphericDispersionIndex
-struct AtmosphericDispersionIndex {
+struct AtmosphericDispersionIndex: Codable {
     let values: [ApparentTemperatureValue]?
 }
