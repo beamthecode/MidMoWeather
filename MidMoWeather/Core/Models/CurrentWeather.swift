@@ -17,7 +17,7 @@ import Foundation
 struct Current: Identifiable, Codable {
     let id: String?
     let type: String?
-    let updateTime: Date?
+    let updateTime: String?
     let validTimes: String?
     let elevation: Elevation?
     let forecastOffice: String?
