@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4F07EFC32CD8E0D7001D919C /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4F07EFC22CD8E0D7001D919C /* SwiftfulUI */; };
+		4F07EFCD2CD8E500001D919C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4F07EFCC2CD8E500001D919C /* SDWebImageSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4FECF6652CD2471D00FBDE3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F07EFCD2CD8E500001D919C /* SDWebImageSwiftUI in Frameworks */,
+				4F07EFC32CD8E0D7001D919C /* SwiftfulUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = MidMoWeather;
 			packageProductDependencies = (
+				4F07EFC22CD8E0D7001D919C /* SwiftfulUI */,
+				4F07EFCC2CD8E500001D919C /* SDWebImageSwiftUI */,
 			);
 			productName = MidMoWeather;
 			productReference = 4FECF6542CD2471A00FBDE3C /* MidMoWeather.app */;
@@ -195,6 +204,10 @@
 			);
 			mainGroup = 4FECF64B2CD2471A00FBDE3C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4F07EFC12CD8E0D7001D919C /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
+				4F07EFCB2CD8E500001D919C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4FECF6552CD2471A00FBDE3C /* Products */;
 			projectDirPath = "";
@@ -552,6 +565,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F07EFC12CD8E0D7001D919C /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		4F07EFCB2CD8E500001D919C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F07EFC22CD8E0D7001D919C /* SwiftfulUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F07EFC12CD8E0D7001D919C /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
+			productName = SwiftfulUI;
+		};
+		4F07EFCC2CD8E500001D919C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F07EFCB2CD8E500001D919C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4FECF64C2CD2471A00FBDE3C /* Project object */;
 }
