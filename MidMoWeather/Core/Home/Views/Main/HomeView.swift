@@ -21,7 +21,19 @@ struct HomeView: View {
             ScrollView(.vertical) {
                 LazyVStack(spacing: 12) {
                     
-                    HeaderCell(height: 300, title: "Columbia", subtitle: "Home", tempTitle: "65", weatherTitle: "Cloudy", highTitle: "72", lowTitle: "61", imageName: URL(string: "https://fastly.picsum.photos/id/38/1280/960.jpg?hmac=HBrgyJHQOGVicaWoXgvdSfTakkAyv4BxAt4rF0DhWkU"), shadowColor: Color.black.opacity(0.6))
+                    HeaderCell(height: 300, title: "Columbia", subtitle: "Home", tempTitle: "65", weatherTitle: "Cloudy", highTitle: "72", lowTitle: "61", imageName: URL(string: "https://fastly.picsum.photos/id/38/1280/960.jpg?hmac=HBrgyJHQOGVicaWoXgvdSfTakkAyv4BxAt4rF0DhWkU"), shadowColor: Color.theme.accent.opacity(0.6))
+                
+                
+                HStack(spacing: 0) {
+                    
+                 
+                    InfoCell(iconName: "sunrise.fill", title: "SUNRISE", detail: "Sunset: 5:03 PM", data: "06:41AM")
+                    
+                    
+                    InfoCell(iconName: "thermometer.variable", title: "FEELS LIKE", detail: "Wind is making it feel cooler.", data: "59°")
+                   
+                    }
+                    
                 }
             }
             
