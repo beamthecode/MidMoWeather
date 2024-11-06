@@ -27,10 +27,11 @@ struct HomeView: View {
                 HStack(spacing: 0) {
                     
                  
-                    InfoCell(iconName: "sunrise.fill", title: "SUNRISE", detail: "Sunset: 5:03 PM", data: "06:41AM")
+                    InfoCell(iconName: "sunrise.fill", title: "SUNRISE", detail: "Sunset: 5:03 PM", data: "06:41AM", width: 170, height: 170)
                     
                     
-                    InfoCell(iconName: "thermometer.variable", title: "FEELS LIKE", detail: "Wind is making it feel cooler.", data: "59°")
+                    InfoCell(iconName: "thermometer.variable", title: "FEELS LIKE", detail: "Wind is making it feel cooler.", data: "59°", width: 170, height: 170)
+                    
                    
                     }
                     

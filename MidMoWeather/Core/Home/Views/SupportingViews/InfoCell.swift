@@ -13,6 +13,9 @@ struct InfoCell: View {
     let title: String
     let detail: String
     let data: String
+    let width: CGFloat
+    let height: CGFloat
+    
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -37,7 +40,7 @@ struct InfoCell: View {
             
             
         }
-        .frame(width: 170, height: 170)
+        .frame(width: width, height: height)
         .background(
             Rectangle()
                 .foregroundStyle(Color.theme.accent.opacity(0.8))
@@ -51,8 +54,8 @@ struct InfoCell: View {
 
 #Preview {
     HStack(spacing: 0) {
-        InfoCell(iconName: "sunrise.fill", title: "SUNRISE", detail: "Sunset: 5:03PM", data: "06:41AM")
-        InfoCell(iconName: "sunrise.fill", title: "SUNRISE", detail: "Sunset: 5:03PM", data: "06:41AM")
+        InfoCell(iconName: "sunrise.fill", title: "SUNRISE", detail: "Sunset: 5:03PM", data: "06:41AM", width: 170, height: 170)
+        InfoCell(iconName: "sunrise.fill", title: "SUNRISE", detail: "Sunset: 5:03PM", data: "06:41AM", width: 170, height: 170)
             
     }
     
