@@ -19,7 +19,7 @@ struct HomeView: View {
             Color.theme.background.ignoresSafeArea()
             
             ScrollView(.vertical) {
-                LazyVStack(spacing: 12) {
+                LazyVStack(spacing: 0) {
                     
                     HeaderCell(height: 300, title: "Columbia", subtitle: "Home", tempTitle: "65", weatherTitle: "Cloudy", highTitle: "72", lowTitle: "61", imageName: URL(string: "https://fastly.picsum.photos/id/38/1280/960.jpg?hmac=HBrgyJHQOGVicaWoXgvdSfTakkAyv4BxAt4rF0DhWkU"), shadowColor: Color.theme.accent.opacity(0.6))
                 
@@ -28,13 +28,19 @@ struct HomeView: View {
                     
                  
                     InfoCell(iconName: "sunrise.fill", title: "SUNRISE", detail: "Sunset: 5:03 PM", data: "06:41AM", width: 170, height: 170)
+                        .offset(x: 10)
                     
                     
                     InfoCell(iconName: "thermometer.variable", title: "FEELS LIKE", detail: "Wind is making it feel cooler.", data: "59°", width: 170, height: 170)
+                        .offset(x: -10)
                     
-                   
                     }
+                
                     
+                    VStack {
+                        InfoCell(iconName: "wind", title: "WIND", detail: "Wind is out of the northwest. Expect gusts of 8mph.", data: "4mph NNW", width: 360, height: 170)
+                            
+                    }
                 }
             }
             
