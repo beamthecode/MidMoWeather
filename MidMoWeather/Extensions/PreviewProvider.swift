@@ -21,6 +21,8 @@ class DeveloperPreview {
     static let instance = DeveloperPreview()
     private init() {}
     
+    let homeVM = HomeViewModel()
+    
     let currentForecast = Current(
         id: "https://api.weather.gov/gridpoints/LSX/38,92",
         type: "wx:Gridpoint",

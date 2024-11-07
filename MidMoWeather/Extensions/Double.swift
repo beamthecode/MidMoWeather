@@ -71,6 +71,7 @@ extension Double {
         return String(format: "%.2f", self)
     }
     
+    
     /// Converts a double into a  string representation with percent symbol
     /// ```
     /// Convert 1.23456 to "1.23%"

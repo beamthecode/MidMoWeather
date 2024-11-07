@@ -10,6 +10,8 @@ import SwiftfulUI
 
 struct HomeView: View {
     
+    @EnvironmentObject var viewModel:  HomeViewModel
+    
     @State private var showWeather: Bool = false
     @State private var showHeader: Bool = true
     @State private var offset: CGFloat = 0
@@ -50,12 +52,16 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    NavigationStack {
-        HomeView()
-            .navigationBarHidden(true)
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            HomeView()
+                .navigationBarHidden(true)
+        }
+        .environmentObject(dev.homeVM)
     }
 }
+
 
 private extension HomeView {
     var header: some View {
