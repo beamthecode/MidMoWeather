@@ -13,6 +13,31 @@ import Foundation
  https://api.weather.gov/gridpoints/LSX/38,92
  */
 
+struct Welcome {
+    let context: [ContextElement]?
+    let id: String?
+    let type: String?
+    let geometry: Geometry?
+    let properties: Current?
+}
+
+enum ContextElement {
+    case contextClass(ContextClass)
+    case string(String)
+}
+
+// MARK: - ContextClass
+struct ContextClass {
+    let version: String?
+    let wmoUnit, nwsUnit: String?
+}
+
+// MARK: - Geometry
+struct Geometry {
+    let type: String?
+    let coordinates: [[[Double]]]?
+}
+
 
 struct Current: Identifiable, Codable {
     let id: String?
